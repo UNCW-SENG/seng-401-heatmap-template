@@ -1,8 +1,34 @@
+# Repo-wide ignores. Each subproject (client/, server/, endpoint/) has its
+# own .gitignore with stack-specific rules; this file covers everything else.
+
+# --- Operating system ---
 .DS_Store
-.idea
-.vscode
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Editors / IDEs ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Secrets / environment ---
+# Never commit real secrets. Commit a *.env.example* instead.
 .env
-venv
-.venv
-__pycache__/
+.env.*
+!.env.example
+
+# --- Logs ---
+*.log
+
+# --- Safety-net catch-alls (subprojects override with details) ---
 node_modules/
+__pycache__/
+.venv/
+venv/

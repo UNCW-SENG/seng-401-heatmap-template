@@ -1,8 +1,32 @@
-.DS_Store
-.idea
-.vscode
-.env
-venv
-.venv
+# Raw Python endpoint (run inside a .venv).
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Byte-compiled / cache ---
 __pycache__/
-node_modules/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# --- Packaging / build ---
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Coverage ---
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# --- Local environment overrides ---
+# Base .env / .env.* are ignored repo-wide; keep .env.example committed.
+.env.local
